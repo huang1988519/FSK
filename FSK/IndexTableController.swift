@@ -15,6 +15,10 @@ class IndexTableController: UITableViewController {
     var reviewCount = 0
 
 
+    //反馈
+    @IBAction func feedback(sender: AnyObject) {
+        self.navigationController?.pushViewController(UMFeedback.feedbackViewController(), animated: true)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

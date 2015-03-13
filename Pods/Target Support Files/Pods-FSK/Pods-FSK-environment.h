@@ -78,3 +78,9 @@
 #define COCOAPODS_VERSION_MINOR_SDWebImage_Core 7
 #define COCOAPODS_VERSION_PATCH_SDWebImage_Core 1
 
+// UMengFeedback
+#define COCOAPODS_POD_AVAILABLE_UMengFeedback
+#define COCOAPODS_VERSION_MAJOR_UMengFeedback 2
+#define COCOAPODS_VERSION_MINOR_UMengFeedback 1
+#define COCOAPODS_VERSION_PATCH_UMengFeedback 0
+

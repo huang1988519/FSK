@@ -15,6 +15,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         [NSThread .sleepForTimeInterval(1.5)]
+        
+        
+        UMFeedback.setAppkey("5502b3c3fd98c53dcf000a69")
+        
         return true
     }
 

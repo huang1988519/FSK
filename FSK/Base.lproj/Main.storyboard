@@ -92,7 +92,7 @@
                     <navigationItem key="navigationItem" id="1Rn-xt-bqu">
                         <barButtonItem key="leftBarButtonItem" title="反馈" id="Stf-QY-U0k">
                             <connections>
-                                <segue destination="bmA-gG-tOl" kind="show" id="W31-oA-TWc"/>
+                                <action selector="feedback:" destination="2wU-0y-nAT" id="g8z-cG-R4B"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -101,45 +101,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IrL-t1-Gca" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-231.5" y="-1154.5"/>
-        </scene>
-        <!--反馈-->
-        <scene sceneID="cIY-qk-qey">
-            <objects>
-                <viewController title="反馈" id="bmA-gG-tOl" userLabel="反馈" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="7kD-Zx-5oT"/>
-                        <viewControllerLayoutGuide type="bottom" id="BhN-7j-9QB"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="57C-hP-bHd">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XRR-GQ-5V8">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <string key="text">如果有建议或者问题，请发邮件到  
- huang1988519@126.com
-
-我会尽可能的来改善app功能 或者 Dota资源.
-也希望大家支持下个人开发者，多多点击广告</string>
-                                <color key="textColor" red="0.33333333329999998" green="0.33333333329999998" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" name="STHeitiTC-Light" family="Heiti TC" pointSize="16"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="XRR-GQ-5V8" firstAttribute="top" secondItem="57C-hP-bHd" secondAttribute="topMargin" id="B79-JP-yO3"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="XRR-GQ-5V8" secondAttribute="trailing" constant="-16" id="Kx8-Ak-d1g"/>
-                            <constraint firstItem="BhN-7j-9QB" firstAttribute="top" secondItem="XRR-GQ-5V8" secondAttribute="bottom" id="az4-wI-XbK"/>
-                            <constraint firstItem="XRR-GQ-5V8" firstAttribute="leading" secondItem="57C-hP-bHd" secondAttribute="leadingMargin" constant="-16" id="i9O-GF-Qtc"/>
-                        </constraints>
-                    </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="zcQ-Pr-UNe" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="260.5" y="-1154.5"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">

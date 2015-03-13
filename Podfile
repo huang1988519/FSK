@@ -5,6 +5,7 @@ target 'FSK' do
 pod 'AFNetworking', '~> 2.5.1'
 pod 'SDWebImage-ProgressView', '~> 0.4.0'
 pod 'MBProgressHUDExtensions', '~> 0.0.1'
+pod 'UMengFeedback', '~> 2.1'
 end
 
 target 'FSKTests' do
