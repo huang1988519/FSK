@@ -8,12 +8,10 @@
 
 import UIKit
 import MediaPlayer
-import GoogleMobileAds
 
-class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate,GADInterstitialDelegate {
+class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate {
     @IBOutlet var tableView: UITableView!
-    var interstital:GADInterstitial = GADInterstitial()
-    @IBOutlet var bannerView: GADBannerView!
+
 
     var viewCount : Int = 1
 
@@ -40,10 +38,7 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
         
         listArray = NSMutableArray()
         
-        self.bannerView.adUnitID = "ca-app-pub-9740809110396658/7355285127"
-        self.bannerView.rootViewController = self
-        var deviceRequest:GADRequest = GADRequest()
-        self.bannerView.loadRequest(deviceRequest)
+       
         
         /*
         listArray = [
@@ -61,10 +56,7 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
             "http://v.ku6.com/show/0viLQCVjgGFY1o5cyfLtfg...html?from=my"
         ]
 */
-        //请求全屏广告
-        if viewCount%3 == 0{
-            showInterstitial()
-        }
+        
         
         request()
         
@@ -76,7 +68,7 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
         
         var type:String = inputDic["typeId"] as String
         
-        var url:NSURL! = NSURL(string: "http://104.224.139.177/fsk.php?type=\(type)")
+        var url:NSURL! = NSURL(string: "http://104.224.139.177/fsk_mobile.php?type=\(type)")
         var request:NSURLRequest = NSURLRequest(URL: url, cachePolicy: NSURLRequestCachePolicy.UseProtocolCachePolicy, timeoutInterval: 10)
         
         op = AFHTTPRequestOperation(request: request)
@@ -187,27 +179,7 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
         return UIInterfaceOrientation.Portrait
     }
     
-    /**
-    
-    *功能:展示全屏广告
-    *限制:进入此viewController ，每三次展示一次
-    */
-    func showInterstitial(){
-        println("展示全屏广告")
-        
-        interstital = GADInterstitial()
-        interstital.adUnitID = "ca-app-pub-9740809110396658/7311585924"
-        interstital.delegate = self
-        var deviceRequest:GADRequest = GADRequest()
-//        deviceRequest.testDevices = ["59dacc3883b1287897acd50d68a2617275d9b323"]
-        interstital.loadRequest(deviceRequest)
-    }
-    func interstitialDidReceiveAd(ad: GADInterstitial!) {
-        ad.presentFromRootViewController(self)
-    }
-    func interstitial(ad: GADInterstitial!, didFailToReceiveAdWithError error: GADRequestError!) {
-        println("GAD \(error)")
-    }
+
 
     /*
     func getSid() -> NSTimeInterval{

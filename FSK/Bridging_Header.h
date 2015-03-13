@@ -7,6 +7,5 @@
 //
 
 #import <AFNetworking.h>
-#import "PlayerViewController.h"
 #import <UIImageView+ProgressView.h>
 #import <UIViewController+MBProgressHUD.h>

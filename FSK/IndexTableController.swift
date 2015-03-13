@@ -7,30 +7,19 @@
 //
 
 import UIKit
-import GoogleMobileAds
-class IndexTableController: UITableViewController ,GADInterstitialDelegate{
+class IndexTableController: UITableViewController {
 
     var listArray:NSMutableArray!
     var op:AFHTTPRequestOperation!
     
     var reviewCount = 0
 
-    
-    @IBOutlet var bannerView: GADBannerView!
-    @IBOutlet var bottomBannerView:GADBannerView!
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
         listArray = NSMutableArray()
-        self.bannerView.adUnitID = "ca-app-pub-9740809110396658/5834852722"
-        self.bannerView.rootViewController = self
-        var deviceRequest:GADRequest = GADRequest()
-        self.bannerView.loadRequest(deviceRequest)
-        
-        self.bottomBannerView.adUnitID = "ca-app-pub-9740809110396658/5878551923"
-        self.bottomBannerView.rootViewController = self
-        var bottomRequest:GADRequest = GADRequest()
-        self.bottomBannerView.loadRequest(bottomRequest)
+
         
         self.navigationItem.title = "首页"
         
@@ -45,7 +34,7 @@ class IndexTableController: UITableViewController ,GADInterstitialDelegate{
     }
     
     func request(){
-        var url:NSURL! = NSURL(string: "http://104.224.139.177/fsk.php")
+        var url:NSURL! = NSURL(string: "http://104.224.139.177/fsk_mobile.php")
         var request:NSURLRequest = NSURLRequest(URL: url, cachePolicy: NSURLRequestCachePolicy.UseProtocolCachePolicy, timeoutInterval: 5)
         
         op = AFHTTPRequestOperation(request: request)
@@ -53,7 +42,7 @@ class IndexTableController: UITableViewController ,GADInterstitialDelegate{
         op.responseSerializer.acceptableContentTypes = NSSet(object: "text/html")
 
         op.setCompletionBlockWithSuccess({ (opation, respondObject) -> Void in
-            
+            self.hideHUD()
             var result:NSDictionary? = respondObject as NSDictionary?
             println(result)
             if (result == nil || result?["result"]==nil){
@@ -66,17 +55,14 @@ class IndexTableController: UITableViewController ,GADInterstitialDelegate{
             self.tableView.reloadData()
             
         }, failure: { (opation, error) -> Void in
+            self.hideHUD()
             println("网络错误\n\n \(error)")
         })
+        self.showHUDWithMessage("加载中...")
         NSOperationQueue.mainQueue().addOperation(op)
     }
 
-    func interstitialDidReceiveAd(ad: GADInterstitial!) {
-        ad.presentFromRootViewController(self)
-    }
-    func interstitial(ad: GADInterstitial!, didFailToReceiveAdWithError error: GADRequestError!) {
-        println("GAD \(error)")
-    }
+
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Potentially incomplete method implementation.

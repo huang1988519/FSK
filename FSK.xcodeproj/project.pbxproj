@@ -10,7 +10,6 @@
 		D900107E1AAEBEDB003D7C4B /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D900107D1AAEBEDB003D7C4B /* MediaPlayer.framework */; };
 		D9190EDB1AB024B700EBAC9B /* IndexTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9190EDA1AB024B700EBAC9B /* IndexTableController.swift */; };
 		D9190EDD1AB0253300EBAC9B /* AuthorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9190EDC1AB0253300EBAC9B /* AuthorCell.swift */; };
-		D9190EDF1AB0570900EBAC9B /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9190EDE1AB0570900EBAC9B /* GoogleMobileAds.framework */; };
 		D9190EE11AB0572400EBAC9B /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9190EE01AB0572400EBAC9B /* StoreKit.framework */; };
 		D9190EE31AB0572D00EBAC9B /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9190EE21AB0572D00EBAC9B /* MessageUI.framework */; };
 		D9190EE61AB0573800EBAC9B /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9190EE41AB0573800EBAC9B /* EventKit.framework */; };
@@ -23,30 +22,9 @@
 		D951B5411AAED4C20068CBEA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D951B5401AAED4C20068CBEA /* UIKit.framework */; };
 		D951B5431AAED4CC0068CBEA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D951B5421AAED4CC0068CBEA /* Foundation.framework */; };
 		D951B5F81AAEE1450068CBEA /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D951B5F71AAEE1450068CBEA /* AVFoundation.framework */; };
-		D951B63F1AAF0ADF0068CBEA /* avplayer.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D951B62B1AAF0ADF0068CBEA /* avplayer.bundle */; };
-		D951B6411AAF0ADF0068CBEA /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D951B6301AAF0ADF0068CBEA /* libcrypto.a */; };
-		D951B6421AAF0ADF0068CBEA /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D951B6311AAF0ADF0068CBEA /* libssl.a */; };
-		D951B6451AAF0AE00068CBEA /* test.ass in Resources */ = {isa = PBXBuildFile; fileRef = D951B6351AAF0ADF0068CBEA /* test.ass */; };
-		D951B6461AAF0AE00068CBEA /* test.SMI in Resources */ = {isa = PBXBuildFile; fileRef = D951B6361AAF0ADF0068CBEA /* test.SMI */; };
-		D951B6471AAF0AE00068CBEA /* test.srt in Resources */ = {isa = PBXBuildFile; fileRef = D951B6371AAF0ADF0068CBEA /* test.srt */; };
-		D951B6481AAF0AE00068CBEA /* trail.AVPTFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D951B6381AAF0ADF0068CBEA /* trail.AVPTFramework.framework */; };
 		D951B64D1AAF0BBF0068CBEA /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D951B64C1AAF0BBF0068CBEA /* libiconv.dylib */; };
 		D951B64F1AAF0BC70068CBEA /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D951B64E1AAF0BC70068CBEA /* libz.dylib */; };
 		D951B6521AB00C7A0068CBEA /* IndexCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D951B6511AB00C7A0068CBEA /* IndexCell.swift */; };
-		D951B6871AB014CA0068CBEA /* AdjustSpeedView.m in Sources */ = {isa = PBXBuildFile; fileRef = D951B6671AB014CA0068CBEA /* AdjustSpeedView.m */; };
-		D951B6881AB014CA0068CBEA /* avplayer.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D951B6681AB014CA0068CBEA /* avplayer.bundle */; };
-		D951B6891AB014CA0068CBEA /* MovieInfosViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = D951B66A1AB014CA0068CBEA /* MovieInfosViewController.mm */; };
-		D951B68A1AB014CA0068CBEA /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D951B66D1AB014CA0068CBEA /* libcrypto.a */; };
-		D951B68B1AB014CA0068CBEA /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D951B66E1AB014CA0068CBEA /* libssl.a */; };
-		D951B68C1AB014CA0068CBEA /* PlaybackSpeedView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D951B66F1AB014CA0068CBEA /* PlaybackSpeedView.xib */; };
-		D951B68D1AB014CA0068CBEA /* PlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D951B6711AB014CA0068CBEA /* PlayerViewController.m */; };
-		D951B68E1AB014CA0068CBEA /* test.ass in Resources */ = {isa = PBXBuildFile; fileRef = D951B6721AB014CA0068CBEA /* test.ass */; };
-		D951B68F1AB014CA0068CBEA /* test.SMI in Resources */ = {isa = PBXBuildFile; fileRef = D951B6731AB014CA0068CBEA /* test.SMI */; };
-		D951B6901AB014CA0068CBEA /* test.srt in Resources */ = {isa = PBXBuildFile; fileRef = D951B6741AB014CA0068CBEA /* test.srt */; };
-		D951B6911AB014CA0068CBEA /* trail.AVPTFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D951B6751AB014CA0068CBEA /* trail.AVPTFramework.framework */; };
-		D951B6921AB014CA0068CBEA /* UIAlertView+Blocks.m in Sources */ = {isa = PBXBuildFile; fileRef = D951B6771AB014CA0068CBEA /* UIAlertView+Blocks.m */; };
-		D951B6931AB014CA0068CBEA /* VideoEffectView.m in Sources */ = {isa = PBXBuildFile; fileRef = D951B6791AB014CA0068CBEA /* VideoEffectView.m */; };
-		D951B6941AB014CA0068CBEA /* VideoEffectView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D951B67A1AB014CA0068CBEA /* VideoEffectView.xib */; };
 		D9AAC2081AADBE440003053B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9AAC2071AADBE440003053B /* AppDelegate.swift */; };
 		D9AAC20A1AADBE440003053B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9AAC2091AADBE440003053B /* ViewController.swift */; };
 		D9AAC20D1AADBE440003053B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9AAC20B1AADBE440003053B /* Main.storyboard */; };
@@ -72,7 +50,6 @@
 		D900107D1AAEBEDB003D7C4B /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		D9190EDA1AB024B700EBAC9B /* IndexTableController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IndexTableController.swift; sourceTree = "<group>"; };
 		D9190EDC1AB0253300EBAC9B /* AuthorCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthorCell.swift; sourceTree = "<group>"; };
-		D9190EDE1AB0570900EBAC9B /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMobileAds.framework; path = FSK/Library/GoogleMobileAds.framework; sourceTree = "<group>"; };
 		D9190EE01AB0572400EBAC9B /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		D9190EE21AB0572D00EBAC9B /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		D9190EE41AB0573800EBAC9B /* EventKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKit.framework; path = System/Library/Frameworks/EventKit.framework; sourceTree = SDKROOT; };
@@ -85,35 +62,9 @@
 		D951B5401AAED4C20068CBEA /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		D951B5421AAED4CC0068CBEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D951B5F71AAEE1450068CBEA /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
-		D951B62B1AAF0ADF0068CBEA /* avplayer.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = avplayer.bundle; path = Library/VideoPlayer/avplayer.bundle; sourceTree = "<group>"; };
-		D951B6301AAF0ADF0068CBEA /* libcrypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcrypto.a; path = FSK/Library/VideoPlayer/openssl/lib/libcrypto.a; sourceTree = "<group>"; };
-		D951B6311AAF0ADF0068CBEA /* libssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libssl.a; path = FSK/Library/VideoPlayer/openssl/lib/libssl.a; sourceTree = "<group>"; };
-		D951B6351AAF0ADF0068CBEA /* test.ass */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = test.ass; path = Library/VideoPlayer/test.ass; sourceTree = "<group>"; };
-		D951B6361AAF0ADF0068CBEA /* test.SMI */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = test.SMI; path = Library/VideoPlayer/test.SMI; sourceTree = "<group>"; };
-		D951B6371AAF0ADF0068CBEA /* test.srt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = test.srt; path = Library/VideoPlayer/test.srt; sourceTree = "<group>"; };
-		D951B6381AAF0ADF0068CBEA /* trail.AVPTFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = trail.AVPTFramework.framework; path = FSK/Library/VideoPlayer/trail.AVPTFramework.framework; sourceTree = "<group>"; };
 		D951B64C1AAF0BBF0068CBEA /* libiconv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libiconv.dylib; path = usr/lib/libiconv.dylib; sourceTree = SDKROOT; };
 		D951B64E1AAF0BC70068CBEA /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		D951B6511AB00C7A0068CBEA /* IndexCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IndexCell.swift; sourceTree = "<group>"; };
-		D951B6661AB014CA0068CBEA /* AdjustSpeedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdjustSpeedView.h; sourceTree = "<group>"; };
-		D951B6671AB014CA0068CBEA /* AdjustSpeedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdjustSpeedView.m; sourceTree = "<group>"; };
-		D951B6681AB014CA0068CBEA /* avplayer.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = avplayer.bundle; sourceTree = "<group>"; };
-		D951B6691AB014CA0068CBEA /* MovieInfosViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieInfosViewController.h; sourceTree = "<group>"; };
-		D951B66A1AB014CA0068CBEA /* MovieInfosViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MovieInfosViewController.mm; sourceTree = "<group>"; };
-		D951B66D1AB014CA0068CBEA /* libcrypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libcrypto.a; sourceTree = "<group>"; };
-		D951B66E1AB014CA0068CBEA /* libssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libssl.a; sourceTree = "<group>"; };
-		D951B66F1AB014CA0068CBEA /* PlaybackSpeedView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlaybackSpeedView.xib; sourceTree = "<group>"; };
-		D951B6701AB014CA0068CBEA /* PlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerViewController.h; sourceTree = "<group>"; };
-		D951B6711AB014CA0068CBEA /* PlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerViewController.m; sourceTree = "<group>"; };
-		D951B6721AB014CA0068CBEA /* test.ass */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = test.ass; sourceTree = "<group>"; };
-		D951B6731AB014CA0068CBEA /* test.SMI */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = test.SMI; sourceTree = "<group>"; };
-		D951B6741AB014CA0068CBEA /* test.srt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = test.srt; sourceTree = "<group>"; };
-		D951B6751AB014CA0068CBEA /* trail.AVPTFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = trail.AVPTFramework.framework; sourceTree = "<group>"; };
-		D951B6761AB014CA0068CBEA /* UIAlertView+Blocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertView+Blocks.h"; sourceTree = "<group>"; };
-		D951B6771AB014CA0068CBEA /* UIAlertView+Blocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+Blocks.m"; sourceTree = "<group>"; };
-		D951B6781AB014CA0068CBEA /* VideoEffectView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoEffectView.h; sourceTree = "<group>"; };
-		D951B6791AB014CA0068CBEA /* VideoEffectView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoEffectView.m; sourceTree = "<group>"; };
-		D951B67A1AB014CA0068CBEA /* VideoEffectView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VideoEffectView.xib; sourceTree = "<group>"; };
 		D9AAC2021AADBE440003053B /* FSK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FSK.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9AAC2061AADBE440003053B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D9AAC2071AADBE440003053B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -148,15 +99,8 @@
 				D9190EE31AB0572D00EBAC9B /* MessageUI.framework in Frameworks */,
 				D9190EE11AB0572400EBAC9B /* StoreKit.framework in Frameworks */,
 				D951B64D1AAF0BBF0068CBEA /* libiconv.dylib in Frameworks */,
-				D951B6911AB014CA0068CBEA /* trail.AVPTFramework.framework in Frameworks */,
 				D951B5431AAED4CC0068CBEA /* Foundation.framework in Frameworks */,
-				D951B6421AAF0ADF0068CBEA /* libssl.a in Frameworks */,
-				D951B6411AAF0ADF0068CBEA /* libcrypto.a in Frameworks */,
-				D951B68A1AB014CA0068CBEA /* libcrypto.a in Frameworks */,
-				D951B6481AAF0AE00068CBEA /* trail.AVPTFramework.framework in Frameworks */,
-				D951B68B1AB014CA0068CBEA /* libssl.a in Frameworks */,
 				D951B5411AAED4C20068CBEA /* UIKit.framework in Frameworks */,
-				D9190EDF1AB0570900EBAC9B /* GoogleMobileAds.framework in Frameworks */,
 				FF21FB8DC5627477FFA08AD9 /* libPods-FSK.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -183,12 +127,8 @@
 				D9190EE51AB0573800EBAC9B /* EventKitUI.framework */,
 				D9190EE21AB0572D00EBAC9B /* MessageUI.framework */,
 				D9190EE01AB0572400EBAC9B /* StoreKit.framework */,
-				D9190EDE1AB0570900EBAC9B /* GoogleMobileAds.framework */,
 				D951B64E1AAF0BC70068CBEA /* libz.dylib */,
 				D951B64C1AAF0BBF0068CBEA /* libiconv.dylib */,
-				D951B6381AAF0ADF0068CBEA /* trail.AVPTFramework.framework */,
-				D951B6301AAF0ADF0068CBEA /* libcrypto.a */,
-				D951B6311AAF0ADF0068CBEA /* libssl.a */,
 				D951B5F71AAEE1450068CBEA /* AVFoundation.framework */,
 				D951B5421AAED4CC0068CBEA /* Foundation.framework */,
 				D951B5401AAED4C20068CBEA /* UIKit.framework */,
@@ -216,56 +156,6 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
-		D951B6641AB014CA0068CBEA /* Library */ = {
-			isa = PBXGroup;
-			children = (
-				D951B6651AB014CA0068CBEA /* VideoPlayer */,
-			);
-			path = Library;
-			sourceTree = "<group>";
-		};
-		D951B6651AB014CA0068CBEA /* VideoPlayer */ = {
-			isa = PBXGroup;
-			children = (
-				D951B6661AB014CA0068CBEA /* AdjustSpeedView.h */,
-				D951B6671AB014CA0068CBEA /* AdjustSpeedView.m */,
-				D951B6681AB014CA0068CBEA /* avplayer.bundle */,
-				D951B6691AB014CA0068CBEA /* MovieInfosViewController.h */,
-				D951B66A1AB014CA0068CBEA /* MovieInfosViewController.mm */,
-				D951B66B1AB014CA0068CBEA /* openssl */,
-				D951B66F1AB014CA0068CBEA /* PlaybackSpeedView.xib */,
-				D951B6701AB014CA0068CBEA /* PlayerViewController.h */,
-				D951B6711AB014CA0068CBEA /* PlayerViewController.m */,
-				D951B6721AB014CA0068CBEA /* test.ass */,
-				D951B6731AB014CA0068CBEA /* test.SMI */,
-				D951B6741AB014CA0068CBEA /* test.srt */,
-				D951B6751AB014CA0068CBEA /* trail.AVPTFramework.framework */,
-				D951B6761AB014CA0068CBEA /* UIAlertView+Blocks.h */,
-				D951B6771AB014CA0068CBEA /* UIAlertView+Blocks.m */,
-				D951B6781AB014CA0068CBEA /* VideoEffectView.h */,
-				D951B6791AB014CA0068CBEA /* VideoEffectView.m */,
-				D951B67A1AB014CA0068CBEA /* VideoEffectView.xib */,
-			);
-			path = VideoPlayer;
-			sourceTree = "<group>";
-		};
-		D951B66B1AB014CA0068CBEA /* openssl */ = {
-			isa = PBXGroup;
-			children = (
-				D951B66C1AB014CA0068CBEA /* lib */,
-			);
-			path = openssl;
-			sourceTree = "<group>";
-		};
-		D951B66C1AB014CA0068CBEA /* lib */ = {
-			isa = PBXGroup;
-			children = (
-				D951B66D1AB014CA0068CBEA /* libcrypto.a */,
-				D951B66E1AB014CA0068CBEA /* libssl.a */,
-			);
-			path = lib;
-			sourceTree = "<group>";
-		};
 		D9AAC1F91AADBE440003053B = {
 			isa = PBXGroup;
 			children = (
@@ -289,7 +179,6 @@
 		D9AAC2041AADBE440003053B /* FSK */ = {
 			isa = PBXGroup;
 			children = (
-				D951B6641AB014CA0068CBEA /* Library */,
 				D951B6501AB00C650068CBEA /* Cell */,
 				D9AAC2071AADBE440003053B /* AppDelegate.swift */,
 				D9190EDA1AB024B700EBAC9B /* IndexTableController.swift */,
@@ -306,10 +195,6 @@
 		D9AAC2051AADBE440003053B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				D951B6351AAF0ADF0068CBEA /* test.ass */,
-				D951B6361AAF0ADF0068CBEA /* test.SMI */,
-				D951B6371AAF0ADF0068CBEA /* test.srt */,
-				D951B62B1AAF0ADF0068CBEA /* avplayer.bundle */,
 				D9AAC2061AADBE440003053B /* Info.plist */,
 				D9AAC2271AADC2570003053B /* Bridging_Header.h */,
 			);
@@ -417,18 +302,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				D9AAC20D1AADBE440003053B /* Main.storyboard in Resources */,
-				D951B6461AAF0AE00068CBEA /* test.SMI in Resources */,
-				D951B68C1AB014CA0068CBEA /* PlaybackSpeedView.xib in Resources */,
-				D951B68F1AB014CA0068CBEA /* test.SMI in Resources */,
-				D951B6451AAF0AE00068CBEA /* test.ass in Resources */,
-				D951B6881AB014CA0068CBEA /* avplayer.bundle in Resources */,
-				D951B6941AB014CA0068CBEA /* VideoEffectView.xib in Resources */,
-				D951B68E1AB014CA0068CBEA /* test.ass in Resources */,
 				D9AAC2121AADBE440003053B /* LaunchScreen.xib in Resources */,
 				D9AAC20F1AADBE440003053B /* Images.xcassets in Resources */,
-				D951B63F1AAF0ADF0068CBEA /* avplayer.bundle in Resources */,
-				D951B6471AAF0AE00068CBEA /* test.srt in Resources */,
-				D951B6901AB014CA0068CBEA /* test.srt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -479,17 +354,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D951B68D1AB014CA0068CBEA /* PlayerViewController.m in Sources */,
-				D951B6921AB014CA0068CBEA /* UIAlertView+Blocks.m in Sources */,
 				D9AAC2291AAE9A8C0003053B /* ResourceParser.swift in Sources */,
 				D9190EDB1AB024B700EBAC9B /* IndexTableController.swift in Sources */,
 				D9AAC20A1AADBE440003053B /* ViewController.swift in Sources */,
 				D951B6521AB00C7A0068CBEA /* IndexCell.swift in Sources */,
 				D9AAC2081AADBE440003053B /* AppDelegate.swift in Sources */,
 				D9190EDD1AB0253300EBAC9B /* AuthorCell.swift in Sources */,
-				D951B6931AB014CA0068CBEA /* VideoEffectView.m in Sources */,
-				D951B6871AB014CA0068CBEA /* AdjustSpeedView.m in Sources */,
-				D951B6891AB014CA0068CBEA /* MovieInfosViewController.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -613,22 +483,15 @@
 			baseConfigurationReference = 9E8A03037DC0D3CF784FA862 /* Pods-FSK.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-1";
 				CODE_SIGN_IDENTITY = "iOS Development: Huang weihua (6NW9W28GDZ)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/FSK/Library/VideoPlayer",
-					"$(PROJECT_DIR)/FSK/Library",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREFIX_HEADER = "";
 				INFOPLIST_FILE = FSK/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/FSK/Library/VideoPlayer/openssl/lib",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_NAME = FSK;
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = FSK/Bridging_Header.h;
@@ -640,23 +503,16 @@
 			baseConfigurationReference = DF6A44AECF11DF08F115E8CD /* Pods-FSK.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-1";
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Jiabin Li (GW7ZRB8ABG)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Jiabin Li (GW7ZRB8ABG)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/FSK/Library/VideoPlayer",
-					"$(PROJECT_DIR)/FSK/Library",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREFIX_HEADER = "";
 				INFOPLIST_FILE = FSK/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/FSK/Library/VideoPlayer/openssl/lib",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_NAME = FSK;
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = FSK/Bridging_Header.h;

@@ -14,10 +14,10 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="34x-ji-RDj">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="tintColor" red="0.96470588239999999" green="0.96470588239999999" blue="0.96470588239999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <color key="barTintColor" red="0.44565217391304346" green="0.19130013524411363" blue="0.1981236724364567" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" red="0.20615105001914805" green="0.2051254229046249" blue="0.20717667713367116" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="0.93725490196078431" green="0.92549019607843142" blue="0.32156862745098036" alpha="1" colorSpace="calibratedRGB"/>
                         <textAttributes key="titleTextAttributes">
-                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <color key="textColor" red="0.10052910052910058" green="0.10052910052910058" blue="0.10052910052910058" alpha="1" colorSpace="calibratedRGB"/>
                         </textAttributes>
                     </navigationBar>
                     <connections>
@@ -39,16 +39,6 @@
                         <color key="separatorColor" red="0.87939663040000005" green="0.87939663040000005" blue="0.87939663040000005" alpha="1" colorSpace="calibratedRGB"/>
                         <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         <color key="sectionIndexBackgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                        <view key="tableHeaderView" contentMode="scaleToFill" id="TlJ-u7-eOo" customClass="GADBannerView">
-                            <rect key="frame" x="0.0" y="64" width="375" height="55"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <color key="backgroundColor" red="0.99607843139999996" green="0.38431372549999998" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        </view>
-                        <view key="tableFooterView" contentMode="scaleToFill" id="jEP-A7-B1t" userLabel="Bottom Banner View" customClass="GADBannerView">
-                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="author" rowHeight="150" id="z6o-vw-Ejl" customClass="AuthorCell" customModule="FSK" customModuleProvider="target">
                                 <autoresizingMask key="autoresizingMask"/>
@@ -65,9 +55,9 @@
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="海涛NB讲解，喝喝海涛NB讲解，喝喝海涛NB讲解，喝喝海涛NB讲解，喝喝" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="06h-YA-8R3">
                                             <rect key="frame" x="34" y="12" width="306" height="126"/>
                                             <fontDescription key="fontDescription" type="system" weight="black" pointSize="21"/>
-                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                            <color key="textColor" red="0.95491097680000003" green="0.95491097680000003" blue="0.95491097680000003" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
-                                            <color key="shadowColor" red="0.1176470588" green="0.47058823529999999" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="shadowColor" red="0.84340111382868388" green="0.18801099387509318" blue="0.93725490199999995" alpha="0.53000000000000003" colorSpace="calibratedRGB"/>
                                         </label>
                                     </subviews>
                                     <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -107,10 +97,6 @@
                         </barButtonItem>
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-                    <connections>
-                        <outlet property="bannerView" destination="TlJ-u7-eOo" id="558-PX-6Ed"/>
-                        <outlet property="bottomBannerView" destination="jEP-A7-B1t" id="dkw-Ee-d7K"/>
-                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IrL-t1-Gca" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -254,7 +240,6 @@
                     <navigationItem key="navigationItem" id="KQ1-CA-PqQ"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
-                        <outlet property="bannerView" destination="5Zi-da-lkG" id="umh-U9-eG7"/>
                         <outlet property="tableView" destination="eV1-on-N7n" id="N60-Dy-RYK"/>
                         <outlet property="view" destination="kh9-bI-dsS" id="q7d-Gr-JcK"/>
                     </connections>
