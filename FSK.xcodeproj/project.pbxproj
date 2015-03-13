@@ -493,7 +493,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_NAME = FSK;
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "4317ab97-96c3-454e-a71f-ed6d136366fd";
 				SWIFT_OBJC_BRIDGING_HEADER = FSK/Bridging_Header.h;
 			};
 			name = Debug;
@@ -514,7 +514,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_NAME = FSK;
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "4317ab97-96c3-454e-a71f-ed6d136366fd";
 				SWIFT_OBJC_BRIDGING_HEADER = FSK/Bridging_Header.h;
 			};
 			name = Release;
