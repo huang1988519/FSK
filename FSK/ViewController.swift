@@ -9,9 +9,10 @@
 import UIKit
 import MediaPlayer
 
-class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate {
+class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate,UMUFPHandleViewDelegate,MMUBannerViewDelegate {
     @IBOutlet var tableView: UITableView!
 
+    @IBOutlet var adView: UIView!
 
     var viewCount : Int = 1
 
@@ -27,6 +28,9 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
     var nodeNSDic:NSMutableDictionary!
     var requestDic:NSMutableDictionary!
 
+    
+    var handleView:UMUFPHandleView!
+    var bottomBanner:MMUBannerView!
     var parser:ResourceParser!
     
     override func viewDidLoad() {
@@ -38,29 +42,31 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
         
         listArray = NSMutableArray()
         
-       
         
-        /*
-        listArray = [
-            "http://v.ku6.com/show/662FjncwgcCx-no4QZd2iA...html?from=my",
-            "http://v.ku6.com/show/HsnxeWEbw3PQC4QXLl_blg...html?from=my",
-            "http://v.ku6.com/show/RWCMDWi101JZyz6HX160cA...html?from=my",
-            "http://v.ku6.com/show/7DpzWK6W-nbbh3E78kCaIQ...html?from=my",
-            "http://v.ku6.com/show/Rx4nWyip2Zj7NpZftlMulQ...html?from=my",
-            "http://v.ku6.com/show/83X19pm5IslFo4a8rX9Xzw...html?from=my",
-            "http://v.ku6.com/show/-ki19HqystcVQ77tKS8SxQ...html?from=my",
-            "http://v.ku6.com/show/r-E3BcTuxrgnJRrgu2kqug...html?from=my",
-            "http://v.ku6.com/show/I5fUJOJRlIxn25j3AcRqTQ...html?from=my",
-            "http://v.ku6.com/show/HQYL4jSKA5563asO81zr2w...html?from=my",
-            "http://v.ku6.com/show/j0xCgWZgH0Rq3j38hD4Rtg...html?from=my",
-            "http://v.ku6.com/show/0viLQCVjgGFY1o5cyfLtfg...html?from=my"
-        ]
-*/
+        bottomBanner = MMUBannerView(frame: CGRectMake(0, 0, 320, 50), slotId: "65065", currentViewController: self)
+        bottomBanner.delegate = self
+        adView.addSubview(bottomBanner)
+        bottomBanner.requestPromoterDataInBackground()
+        //
+        handleView = UMUFPHandleView(frame: CGRectMake(CGRectGetWidth(self.view.frame)-64, CGRectGetHeight(self.tableView.frame)-64, 44, 44), appKey: nil
+            , slotId: "65066", currentViewController: self)
+
+        handleView.delegate = self
         
+        self.view.addSubview(handleView);
+        handleView.requestPromoterDataInBackground()
         
         request()
         
         
+    }
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        bottomBanner.frame = adView.bounds;
+
+        handleView.frame = CGRectMake(CGRectGetWidth(self.view.frame)-64, CGRectGetHeight(self.tableView.frame)-64, 44, 44)
+        handleView.clipsToBounds = true
+        handleView.layer.cornerRadius = 44/2
     }
     
     func request(){
@@ -149,7 +155,7 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
                 var dic = nodeDic as NSDictionary
                 self.nodeNSDic.setObject(dic, forKey: String(indexPath.row))
                 NSOperationQueue.mainQueue().addOperationWithBlock({ () -> Void in
-                    tableView.reloadData()
+                    self.tableView.reloadData()
                 })
             })
             requestDic.setObject(parser, forKey: (indexPath.row))

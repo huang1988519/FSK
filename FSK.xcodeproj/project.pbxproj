@@ -10,7 +10,6 @@
 		D900107E1AAEBEDB003D7C4B /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D900107D1AAEBEDB003D7C4B /* MediaPlayer.framework */; };
 		D9190EDB1AB024B700EBAC9B /* IndexTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9190EDA1AB024B700EBAC9B /* IndexTableController.swift */; };
 		D9190EDD1AB0253300EBAC9B /* AuthorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9190EDC1AB0253300EBAC9B /* AuthorCell.swift */; };
-		D9190EE11AB0572400EBAC9B /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9190EE01AB0572400EBAC9B /* StoreKit.framework */; };
 		D9190EE31AB0572D00EBAC9B /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9190EE21AB0572D00EBAC9B /* MessageUI.framework */; };
 		D9190EE61AB0573800EBAC9B /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9190EE41AB0573800EBAC9B /* EventKit.framework */; };
 		D9190EE71AB0573800EBAC9B /* EventKitUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9190EE51AB0573800EBAC9B /* EventKitUI.framework */; };
@@ -25,6 +24,14 @@
 		D951B64D1AAF0BBF0068CBEA /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D951B64C1AAF0BBF0068CBEA /* libiconv.dylib */; };
 		D951B64F1AAF0BC70068CBEA /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D951B64E1AAF0BC70068CBEA /* libz.dylib */; };
 		D951B6521AB00C7A0068CBEA /* IndexCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D951B6511AB00C7A0068CBEA /* IndexCell.swift */; };
+		D982928A1AC28B0A00660153 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D98292891AC28B0A00660153 /* CoreLocation.framework */; };
+		D982928C1AC28B1F00660153 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D982928B1AC28B1F00660153 /* MapKit.framework */; };
+		D982928E1AC28B8700660153 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D982928D1AC28B8700660153 /* CoreGraphics.framework */; };
+		D98292901AC28B9000660153 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D982928F1AC28B9000660153 /* QuartzCore.framework */; };
+		D98292A31AC29FC600660153 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9190EE01AB0572400EBAC9B /* StoreKit.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		D98292E01AC3AC0900660153 /* libMMU_5.4.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D98292D81AC3AC0900660153 /* libMMU_5.4.0.a */; };
+		D98292E11AC3AC0900660153 /* UMUFP.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D98292DA1AC3AC0900660153 /* UMUFP.bundle */; };
+		D98292E21AC3AC0900660153 /* UTDID.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D98292DB1AC3AC0900660153 /* UTDID.framework */; };
 		D9AAC2081AADBE440003053B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9AAC2071AADBE440003053B /* AppDelegate.swift */; };
 		D9AAC20A1AADBE440003053B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9AAC2091AADBE440003053B /* ViewController.swift */; };
 		D9AAC20D1AADBE440003053B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9AAC20B1AADBE440003053B /* Main.storyboard */; };
@@ -65,6 +72,18 @@
 		D951B64C1AAF0BBF0068CBEA /* libiconv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libiconv.dylib; path = usr/lib/libiconv.dylib; sourceTree = SDKROOT; };
 		D951B64E1AAF0BC70068CBEA /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		D951B6511AB00C7A0068CBEA /* IndexCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IndexCell.swift; sourceTree = "<group>"; };
+		D98292891AC28B0A00660153 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		D982928B1AC28B1F00660153 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		D982928D1AC28B8700660153 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		D982928F1AC28B9000660153 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		D98292D81AC3AC0900660153 /* libMMU_5.4.0.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libMMU_5.4.0.a; sourceTree = "<group>"; };
+		D98292D91AC3AC0900660153 /* MMUPromotersDataObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMUPromotersDataObject.h; sourceTree = "<group>"; };
+		D98292DA1AC3AC0900660153 /* UMUFP.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = UMUFP.bundle; sourceTree = "<group>"; };
+		D98292DB1AC3AC0900660153 /* UTDID.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = UTDID.framework; sourceTree = "<group>"; };
+		D98292DC1AC3AC0900660153 /* MMUBannerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMUBannerView.h; sourceTree = "<group>"; };
+		D98292DD1AC3AC0900660153 /* MMUInterstitialView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMUInterstitialView.h; sourceTree = "<group>"; };
+		D98292DE1AC3AC0900660153 /* UMUFPBadgeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UMUFPBadgeView.h; sourceTree = "<group>"; };
+		D98292DF1AC3AC0900660153 /* UMUFPHandleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UMUFPHandleView.h; sourceTree = "<group>"; };
 		D9AAC2021AADBE440003053B /* FSK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FSK.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9AAC2061AADBE440003053B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D9AAC2071AADBE440003053B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -86,20 +105,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D98292A31AC29FC600660153 /* StoreKit.framework in Frameworks */,
+				D98292901AC28B9000660153 /* QuartzCore.framework in Frameworks */,
+				D982928E1AC28B8700660153 /* CoreGraphics.framework in Frameworks */,
+				D9190EE31AB0572D00EBAC9B /* MessageUI.framework in Frameworks */,
+				D9190EE91AB0574600EBAC9B /* CoreTelephony.framework in Frameworks */,
+				D982928C1AC28B1F00660153 /* MapKit.framework in Frameworks */,
+				D982928A1AC28B0A00660153 /* CoreLocation.framework in Frameworks */,
 				D9190EF11AB057CB00EBAC9B /* AdSupport.framework in Frameworks */,
 				D9190EEF1AB057C400EBAC9B /* CFNetwork.framework in Frameworks */,
 				D900107E1AAEBEDB003D7C4B /* MediaPlayer.framework in Frameworks */,
 				D9190EED1AB0577A00EBAC9B /* SystemConfiguration.framework in Frameworks */,
+				D98292E21AC3AC0900660153 /* UTDID.framework in Frameworks */,
 				D9190EEB1AB0576A00EBAC9B /* libsqlite3.dylib in Frameworks */,
 				D951B64F1AAF0BC70068CBEA /* libz.dylib in Frameworks */,
 				D951B5F81AAEE1450068CBEA /* AVFoundation.framework in Frameworks */,
-				D9190EE91AB0574600EBAC9B /* CoreTelephony.framework in Frameworks */,
 				D9190EE61AB0573800EBAC9B /* EventKit.framework in Frameworks */,
 				D9190EE71AB0573800EBAC9B /* EventKitUI.framework in Frameworks */,
-				D9190EE31AB0572D00EBAC9B /* MessageUI.framework in Frameworks */,
-				D9190EE11AB0572400EBAC9B /* StoreKit.framework in Frameworks */,
 				D951B64D1AAF0BBF0068CBEA /* libiconv.dylib in Frameworks */,
 				D951B5431AAED4CC0068CBEA /* Foundation.framework in Frameworks */,
+				D98292E01AC3AC0900660153 /* libMMU_5.4.0.a in Frameworks */,
 				D951B5411AAED4C20068CBEA /* UIKit.framework in Frameworks */,
 				FF21FB8DC5627477FFA08AD9 /* libPods-FSK.a in Frameworks */,
 			);
@@ -118,6 +143,10 @@
 		4EE5D0539B9910B58B15455D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D982928F1AC28B9000660153 /* QuartzCore.framework */,
+				D982928D1AC28B8700660153 /* CoreGraphics.framework */,
+				D982928B1AC28B1F00660153 /* MapKit.framework */,
+				D98292891AC28B0A00660153 /* CoreLocation.framework */,
 				D9190EF01AB057CB00EBAC9B /* AdSupport.framework */,
 				D9190EEE1AB057C400EBAC9B /* CFNetwork.framework */,
 				D9190EEC1AB0577A00EBAC9B /* SystemConfiguration.framework */,
@@ -156,6 +185,29 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		D98292D61AC3AC0900660153 /* AliSDK */ = {
+			isa = PBXGroup;
+			children = (
+				D98292D71AC3AC0900660153 /* base */,
+				D98292DC1AC3AC0900660153 /* MMUBannerView.h */,
+				D98292DD1AC3AC0900660153 /* MMUInterstitialView.h */,
+				D98292DE1AC3AC0900660153 /* UMUFPBadgeView.h */,
+				D98292DF1AC3AC0900660153 /* UMUFPHandleView.h */,
+			);
+			path = AliSDK;
+			sourceTree = "<group>";
+		};
+		D98292D71AC3AC0900660153 /* base */ = {
+			isa = PBXGroup;
+			children = (
+				D98292D81AC3AC0900660153 /* libMMU_5.4.0.a */,
+				D98292D91AC3AC0900660153 /* MMUPromotersDataObject.h */,
+				D98292DA1AC3AC0900660153 /* UMUFP.bundle */,
+				D98292DB1AC3AC0900660153 /* UTDID.framework */,
+			);
+			path = base;
+			sourceTree = "<group>";
+		};
 		D9AAC1F91AADBE440003053B = {
 			isa = PBXGroup;
 			children = (
@@ -179,6 +231,7 @@
 		D9AAC2041AADBE440003053B /* FSK */ = {
 			isa = PBXGroup;
 			children = (
+				D98292D61AC3AC0900660153 /* AliSDK */,
 				D951B6501AB00C650068CBEA /* Cell */,
 				D9AAC2071AADBE440003053B /* AppDelegate.swift */,
 				D9190EDA1AB024B700EBAC9B /* IndexTableController.swift */,
@@ -302,6 +355,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D9AAC20D1AADBE440003053B /* Main.storyboard in Resources */,
+				D98292E11AC3AC0900660153 /* UMUFP.bundle in Resources */,
 				D9AAC2121AADBE440003053B /* LaunchScreen.xib in Resources */,
 				D9AAC20F1AADBE440003053B /* Images.xcassets in Resources */,
 			);
@@ -484,14 +538,20 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-1";
-				CODE_SIGN_IDENTITY = "iOS Development: Huang weihua (6NW9W28GDZ)";
-				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/FSK/AliSDK/base",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREFIX_HEADER = "";
 				INFOPLIST_FILE = FSK/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/FSK/AliSDK/base",
+				);
 				PRODUCT_NAME = FSK;
 				PROVISIONING_PROFILE = "4317ab97-96c3-454e-a71f-ed6d136366fd";
 				SWIFT_OBJC_BRIDGING_HEADER = FSK/Bridging_Header.h;
@@ -504,15 +564,21 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-1";
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Jiabin Li (GW7ZRB8ABG)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Jiabin Li (GW7ZRB8ABG)";
-				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/FSK/AliSDK/base",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREFIX_HEADER = "";
 				INFOPLIST_FILE = FSK/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/FSK/AliSDK/base",
+				);
 				PRODUCT_NAME = FSK;
 				PROVISIONING_PROFILE = "4317ab97-96c3-454e-a71f-ed6d136366fd";
 				SWIFT_OBJC_BRIDGING_HEADER = FSK/Bridging_Header.h;

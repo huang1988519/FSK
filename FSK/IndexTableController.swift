@@ -7,10 +7,17 @@
 //
 
 import UIKit
-class IndexTableController: UITableViewController {
+class IndexTableController: UIViewController ,MMUBannerViewDelegate,UMUFPHandleViewDelegate,UITableViewDelegate,UITableViewDataSource{
 
     var listArray:NSMutableArray!
     var op:AFHTTPRequestOperation!
+    
+    @IBOutlet var tableView: UITableView!
+    
+    @IBOutlet var adView: UIView!
+    @IBOutlet var bottomBanner: MMUBannerView!
+    
+    var handleView:UMUFPHandleView!
     
     var reviewCount = 0
 
@@ -29,10 +36,38 @@ class IndexTableController: UITableViewController {
         
         var refreshBtn:UIBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Refresh, target: self, action: "refresh")
         self.navigationItem.rightBarButtonItem = refreshBtn
+
+        var feedBackBtn:UIBarButtonItem = UIBarButtonItem(title: "反馈", style: UIBarButtonItemStyle.Plain, target: self, action: "feedback:")
+        self.navigationItem.leftBarButtonItem = feedBackBtn
+        
+        MMUBannerView.setAppChannel("Appstore");
+        
+        bottomBanner = MMUBannerView(frame: CGRectMake(0, 0, 320, 50), slotId: "65065", currentViewController: self)
+        bottomBanner.delegate = self
+        bottomBanner.frame = adView.bounds;
+        adView.addSubview(bottomBanner)
+        bottomBanner.requestPromoterDataInBackground()
+        
+        
+        //
+        handleView = UMUFPHandleView(frame: CGRectMake(CGRectGetWidth(self.view.frame)-64, CGRectGetHeight(self.tableView.frame)-64, 44, 44), appKey: nil
+            , slotId: "65066", currentViewController: self)
+        handleView.delegate = self
+
+        self.view.addSubview(handleView);
+        handleView.requestPromoterDataInBackground()
+        
         
         request()
     }
-    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        bottomBanner.frame = adView.bounds
+        handleView.frame = CGRectMake(CGRectGetWidth(self.view.frame)-64, CGRectGetHeight(self.tableView.frame)-64, 44, 44)
+        handleView.clipsToBounds = true
+        handleView.layer.cornerRadius = 44/2
+    }
     func refresh(){
         request()
     }
@@ -68,7 +103,7 @@ class IndexTableController: UITableViewController {
 
 
 
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Potentially incomplete method implementation.
         // Return the number of sections.
         return 1
@@ -94,17 +129,16 @@ class IndexTableController: UITableViewController {
 
         
     }
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete method implementation.
         // Return the number of rows in the section.
         return listArray.count
     }
-    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         return 150
     }
 
-    
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("author", forIndexPath: indexPath) as AuthorCell
         
         var dic:NSDictionary! = listArray[indexPath.row] as NSDictionary
@@ -118,50 +152,19 @@ class IndexTableController: UITableViewController {
         return cell
     }
     
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return NO if you do not want the specified item to be editable.
-        return true
+    
+    
+    func bannerView(banner: MMUBannerView!, didLoadPromoterFailedWithError error: NSError!) {
+        println("加载banner 失败  \(error)")
     }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-        if editingStyle == .Delete {
-            // Delete the row from the data source
-            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-        } else if editingStyle == .Insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+    func bannerDidAppear(banner: MMUBannerView!) {
+        println("banner 出现")
     }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(tableView: UITableView, moveRowAtIndexPath fromIndexPath: NSIndexPath, toIndexPath: NSIndexPath) {
-
+    
+    func didLoadDataFailWithError(handleView: UMUFPHandleView!, error: NSError!) {
+        println("获取handle失败 \(error)")
     }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return NO if you do not want the item to be re-orderable.
-        return true
+    func didLoadDataFinished(handleView: UMUFPHandleView!) {
+        println("加载handle成功")
     }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using [segue destinationViewController].
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
