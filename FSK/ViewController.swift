@@ -72,23 +72,23 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
     func request(){
         if inputDic==nil {return}
         
-        var type:String = inputDic["typeId"] as String
+        var type:String = inputDic["typeId"] as! String
         
         var url:NSURL! = NSURL(string: "http://104.224.139.177/fsk_mobile.php?type=\(type)")
         var request:NSURLRequest = NSURLRequest(URL: url, cachePolicy: NSURLRequestCachePolicy.UseProtocolCachePolicy, timeoutInterval: 10)
         
         op = AFHTTPRequestOperation(request: request)
         op.responseSerializer = AFJSONResponseSerializer()
-        op.responseSerializer.acceptableContentTypes = NSSet(object: "text/html")
+        op.responseSerializer.acceptableContentTypes = NSSet(object: "text/html") as Set<NSObject>
         
         op.setCompletionBlockWithSuccess({ (opation, respondObject) -> Void in
             
-            var result:NSDictionary? = respondObject as NSDictionary?
+            var result:NSDictionary? = respondObject as! NSDictionary?
             println(result)
             if (result == nil || result?["result"]==nil){
                 return
             }
-            var data:NSArray! = result!["result"] as NSArray!
+            var data:[AnyObject] = result!["result"] as! [AnyObject]
             self.listArray.removeAllObjects()
             self.listArray.addObjectsFromArray(data)
             
@@ -102,12 +102,12 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
     func parseAddress(dic:NSDictionary){
         parser = ResourceParser()
         
-        var urlString:String = dic["url"] as String
+        var urlString:String = dic["url"] as! String
         self.showHUDWithMessage("加载中...")
         parser.getRealAddressByWeb(urlString, getRealPathBlock: { (realPath) -> Void in
 
             self.hideHUD()
-            var path :String! = realPath as String!
+            var path :String! = realPath as! String!
             println("realPath\n \(path)\n")
             if path == nil{
                 return
@@ -131,7 +131,7 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        var urlPath:NSDictionary! = listArray[indexPath.row] as NSDictionary
+        var urlPath:NSDictionary! = listArray[indexPath.row] as! NSDictionary
         self.parseAddress(urlPath)
     }
     
@@ -139,20 +139,20 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
         return listArray.count
     }
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var cell:IndexCell = tableView.dequeueReusableCellWithIdentifier("cell") as IndexCell
+        var cell:IndexCell = tableView.dequeueReusableCellWithIdentifier("cell") as! IndexCell
         
         
-        var dic:NSDictionary = listArray[indexPath.row] as NSDictionary
-        var urlPath:String = dic["url"] as String
+        var dic:NSDictionary = listArray[indexPath.row] as! NSDictionary
+        var urlPath:String = dic["url"] as! String
         
-        var node:Dictionary<String,String>!  = nodesDic[String(indexPath.row)] as Dictionary<String,String>?
+        var node:Dictionary<String,String>!  = nodesDic[String(indexPath.row)] as! Dictionary<String,String>?
         
         if nodeNSDic[String(indexPath.row)] == nil {
             cell.cus_titleLabel?.text = "加载中..."
             
             var parser:ResourceParser = ResourceParser()
             parser.getNodeValue(urlPath, getRealPathBlock: { (nodeDic) -> Void in
-                var dic = nodeDic as NSDictionary
+                var dic = nodeDic as! NSDictionary
                 self.nodeNSDic.setObject(dic, forKey: String(indexPath.row))
                 NSOperationQueue.mainQueue().addOperationWithBlock({ () -> Void in
                     self.tableView.reloadData()
@@ -161,12 +161,12 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
             requestDic.setObject(parser, forKey: (indexPath.row))
             
         }else{
-            var nodeNS:NSDictionary! = nodeNSDic[String(indexPath.row)] as NSDictionary
+            var nodeNS:NSDictionary! = nodeNSDic[String(indexPath.row)] as! NSDictionary
             
-            cell.cus_titleLabel?.text = nodeNS["t"] as String!
-            cell.cus_detailLabel?.text = nodeNS["desc"] as String!
+            cell.cus_titleLabel?.text = nodeNS["t"] as! String!
+            cell.cus_detailLabel?.text = nodeNS["desc"] as! String!
             
-            var imagePath:String = nodeNS["bigpicpath"] as String!
+            var imagePath:String = nodeNS["bigpicpath"] as! String!
             cell.cus_imageView?.sd_setImageWithURL(NSURL(string: imagePath))
         }
         println("node: \(node)")

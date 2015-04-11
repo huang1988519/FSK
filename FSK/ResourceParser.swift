@@ -29,18 +29,18 @@ class ResourceParser: NSObject,UIWebViewDelegate{
             _getRealPathBlock!(nil)
         }
         var manager:AFHTTPRequestOperationManager = AFHTTPRequestOperationManager()
-        manager.responseSerializer.acceptableContentTypes = NSSet(object: "text/html")
+        manager.responseSerializer.acceptableContentTypes = NSSet(object: "text/html") as Set<NSObject>
         manager.GET(path, parameters: nil, success: { (operation, respond) -> Void in
             
             
-            var result:NSDictionary? = respond as NSDictionary?
+            var result:NSDictionary? = respond as! NSDictionary?
                 println(result)
             if (result == nil || result?["data"]==nil){
                 self._getRealPathBlock!(nil)
                 return
             }
-            var data:NSDictionary! = result!["data"] as NSDictionary!
-            var file:String!  = data["f"] as String
+            var data:NSDictionary! = result!["data"] as! NSDictionary!
+            var file:String!  = data["f"] as! String
             self._getRealPathBlock!(String(file))
             
             }) { (operation, error) -> Void in
@@ -59,7 +59,7 @@ class ResourceParser: NSObject,UIWebViewDelegate{
         }
         _getRealPathBlock = getRealPathBlock
         
-        var delegate :AppDelegate = UIApplication.sharedApplication().delegate as AppDelegate
+        var delegate :AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         var windown:UIWindow! = delegate.window
         webView.delegate = self
         windown.addSubview(webView)
@@ -77,17 +77,17 @@ class ResourceParser: NSObject,UIWebViewDelegate{
             getRealPathBlock!(nil)
         }
         var manager:AFHTTPRequestOperationManager = AFHTTPRequestOperationManager()
-        manager.responseSerializer.acceptableContentTypes = NSSet(object: "text/html")
+        manager.responseSerializer.acceptableContentTypes = NSSet(object: "text/html") as Set<NSObject>
         manager.GET(path, parameters: nil, success: { (operation, respond) -> Void in
             
             
-            var result:NSDictionary? = respond as NSDictionary?
+            var result:NSDictionary? = respond as! NSDictionary?
             println(result)
             if (result == nil || result?["data"]==nil){
                 getRealPathBlock!(nil)
                 return
             }
-            var data:NSDictionary! = result!["data"] as NSDictionary!
+            var data:NSDictionary! = result!["data"] as! NSDictionary!
             getRealPathBlock!(data)
             
             }) { (operation, error) -> Void in

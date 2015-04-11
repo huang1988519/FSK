@@ -78,16 +78,16 @@ class IndexTableController: UIViewController ,MMUBannerViewDelegate,UMUFPHandleV
         
         op = AFHTTPRequestOperation(request: request)
         op.responseSerializer = AFJSONResponseSerializer()
-        op.responseSerializer.acceptableContentTypes = NSSet(object: "text/html")
+        op.responseSerializer.acceptableContentTypes = NSSet(object: "text/html") as Set<NSObject>
 
         op.setCompletionBlockWithSuccess({ (opation, respondObject) -> Void in
             self.hideHUD()
-            var result:NSDictionary? = respondObject as NSDictionary?
+            var result:NSDictionary? = respondObject as? NSDictionary
             println(result)
             if (result == nil || result?["result"]==nil){
                 return
             }
-            var data:NSArray! = result!["result"] as NSArray!
+            var data:[AnyObject] = result!["result"] as! NSArray as [AnyObject]
             self.listArray.removeAllObjects()
             self.listArray.addObjectsFromArray(data)
             
@@ -114,15 +114,15 @@ class IndexTableController: UIViewController ,MMUBannerViewDelegate,UMUFPHandleV
         super.prepareForSegue(segue, sender: sender)
 
         
-        var toCtrl:UIViewController! = segue.destinationViewController as UIViewController
+        var toCtrl:UIViewController! = segue.destinationViewController as! UIViewController
         if toCtrl is ViewController{
             
             var indexPath: NSIndexPath = self.tableView.indexPathForSelectedRow()!
             
-            var dic:NSDictionary! = listArray[indexPath.row] as NSDictionary
+            var dic:NSDictionary! = listArray[indexPath.row] as! NSDictionary
             
             
-            var ctrl:ViewController! = segue.destinationViewController as ViewController
+            var ctrl:ViewController! = segue.destinationViewController as! ViewController
             ctrl.inputDic = dic
             ctrl.viewCount=reviewCount
         }
@@ -139,15 +139,15 @@ class IndexTableController: UIViewController ,MMUBannerViewDelegate,UMUFPHandleV
     }
 
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("author", forIndexPath: indexPath) as AuthorCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("author", forIndexPath: indexPath) as! AuthorCell
         
-        var dic:NSDictionary! = listArray[indexPath.row] as NSDictionary
+        var dic:NSDictionary! = listArray[indexPath.row] as! NSDictionary
         if dic==nil{
             cell.cus_imageView.sd_setImageWithURL(NSURL(string: "http://file3.u148.net/2012/9/images/1347177504805.jpg"))
         }else{
-            cell.cus_imageView.sd_setImageWithURL(NSURL(string: dic["cover"] as String))
+            cell.cus_imageView.sd_setImageWithURL(NSURL(string: dic["cover"] as! String))
         }
-        cell.cus_titleLabel.text = dic["title"] as String!
+        cell.cus_titleLabel.text = dic["title"] as! String
         
         return cell
     }
