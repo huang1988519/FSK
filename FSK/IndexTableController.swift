@@ -7,17 +7,16 @@
 //
 
 import UIKit
-class IndexTableController: UIViewController ,MMUBannerViewDelegate,UMUFPHandleViewDelegate,UITableViewDelegate,UITableViewDataSource{
+import GoogleMobileAds
+
+class IndexTableController: UIViewController,UITableViewDelegate,UITableViewDataSource{
 
     var listArray:NSMutableArray!
     var op:AFHTTPRequestOperation!
     
     @IBOutlet var tableView: UITableView!
     
-    @IBOutlet var adView: UIView!
-    @IBOutlet var bottomBanner: MMUBannerView!
-    
-    var handleView:UMUFPHandleView!
+    @IBOutlet var adView: GADBannerView!
     
     var reviewCount = 0
 
@@ -40,33 +39,18 @@ class IndexTableController: UIViewController ,MMUBannerViewDelegate,UMUFPHandleV
         var feedBackBtn:UIBarButtonItem = UIBarButtonItem(title: "反馈", style: UIBarButtonItemStyle.Plain, target: self, action: "feedback:")
         self.navigationItem.leftBarButtonItem = feedBackBtn
         
-        MMUBannerView.setAppChannel("Appstore");
+        //adView
+        adView.adUnitID = "ca-app-pub-9740809110396658/4830291920"
+        adView.rootViewController = self
+        var adRequest:GADRequest = GADRequest()
+        adRequest.testDevices = [""]
+        adView.loadRequest(adRequest)
         
-        bottomBanner = MMUBannerView(frame: CGRectMake(0, 0, 320, 50), slotId: "65065", currentViewController: self)
-        bottomBanner.delegate = self
-        bottomBanner.frame = adView.bounds;
-        adView.addSubview(bottomBanner)
-        bottomBanner.requestPromoterDataInBackground()
-        
-        
-        //
-        handleView = UMUFPHandleView(frame: CGRectMake(CGRectGetWidth(self.view.frame)-64, CGRectGetHeight(self.tableView.frame)-64, 44, 44), appKey: nil
-            , slotId: "65066", currentViewController: self)
-        handleView.delegate = self
-
-        self.view.addSubview(handleView);
-        handleView.requestPromoterDataInBackground()
-        
-        
+        //请求接口
         request()
     }
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        
-        bottomBanner.frame = adView.bounds
-        handleView.frame = CGRectMake(CGRectGetWidth(self.view.frame)-64, CGRectGetHeight(self.tableView.frame)-64, 44, 44)
-        handleView.clipsToBounds = true
-        handleView.layer.cornerRadius = 44/2
     }
     func refresh(){
         request()
@@ -147,24 +131,9 @@ class IndexTableController: UIViewController ,MMUBannerViewDelegate,UMUFPHandleV
         }else{
             cell.cus_imageView.sd_setImageWithURL(NSURL(string: dic["cover"] as! String))
         }
-        cell.cus_titleLabel.text = dic["title"] as! String
+        cell.cus_titleLabel.text = dic["title"] as? String
         
         return cell
     }
     
-    
-    
-    func bannerView(banner: MMUBannerView!, didLoadPromoterFailedWithError error: NSError!) {
-        println("加载banner 失败  \(error)")
-    }
-    func bannerDidAppear(banner: MMUBannerView!) {
-        println("banner 出现")
-    }
-    
-    func didLoadDataFailWithError(handleView: UMUFPHandleView!, error: NSError!) {
-        println("获取handle失败 \(error)")
-    }
-    func didLoadDataFinished(handleView: UMUFPHandleView!) {
-        println("加载handle成功")
-    }
 }

@@ -13,6 +13,3 @@
 #import <UIImageView+ProgressView.h>
 #import <UIViewController+MBProgressHUD.h>
 #import <UMFeedback.h>
-
-#import "MMUBannerView.h"
-#import "UMUFPHandleView.h"

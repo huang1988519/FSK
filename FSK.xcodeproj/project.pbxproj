@@ -29,9 +29,6 @@
 		D982928E1AC28B8700660153 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D982928D1AC28B8700660153 /* CoreGraphics.framework */; };
 		D98292901AC28B9000660153 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D982928F1AC28B9000660153 /* QuartzCore.framework */; };
 		D98292A31AC29FC600660153 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9190EE01AB0572400EBAC9B /* StoreKit.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
-		D98292E01AC3AC0900660153 /* libMMU_5.4.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D98292D81AC3AC0900660153 /* libMMU_5.4.0.a */; };
-		D98292E11AC3AC0900660153 /* UMUFP.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D98292DA1AC3AC0900660153 /* UMUFP.bundle */; };
-		D98292E21AC3AC0900660153 /* UTDID.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D98292DB1AC3AC0900660153 /* UTDID.framework */; };
 		D9AAC2081AADBE440003053B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9AAC2071AADBE440003053B /* AppDelegate.swift */; };
 		D9AAC20A1AADBE440003053B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9AAC2091AADBE440003053B /* ViewController.swift */; };
 		D9AAC20D1AADBE440003053B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9AAC20B1AADBE440003053B /* Main.storyboard */; };
@@ -39,6 +36,7 @@
 		D9AAC2121AADBE440003053B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9AAC2101AADBE440003053B /* LaunchScreen.xib */; };
 		D9AAC21E1AADBE440003053B /* FSKTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9AAC21D1AADBE440003053B /* FSKTests.swift */; };
 		D9AAC2291AAE9A8C0003053B /* ResourceParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9AAC2281AAE9A8C0003053B /* ResourceParser.swift */; };
+		D9C1EA011B201F7B000F4F5B /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9C1EA001B201F7B000F4F5B /* GoogleMobileAds.framework */; };
 		FF21FB8DC5627477FFA08AD9 /* libPods-FSK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DBF127763075F314F1943D2A /* libPods-FSK.a */; };
 /* End PBXBuildFile section */
 
@@ -76,14 +74,6 @@
 		D982928B1AC28B1F00660153 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		D982928D1AC28B8700660153 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		D982928F1AC28B9000660153 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		D98292D81AC3AC0900660153 /* libMMU_5.4.0.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libMMU_5.4.0.a; sourceTree = "<group>"; };
-		D98292D91AC3AC0900660153 /* MMUPromotersDataObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMUPromotersDataObject.h; sourceTree = "<group>"; };
-		D98292DA1AC3AC0900660153 /* UMUFP.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = UMUFP.bundle; sourceTree = "<group>"; };
-		D98292DB1AC3AC0900660153 /* UTDID.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = UTDID.framework; sourceTree = "<group>"; };
-		D98292DC1AC3AC0900660153 /* MMUBannerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMUBannerView.h; sourceTree = "<group>"; };
-		D98292DD1AC3AC0900660153 /* MMUInterstitialView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMUInterstitialView.h; sourceTree = "<group>"; };
-		D98292DE1AC3AC0900660153 /* UMUFPBadgeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UMUFPBadgeView.h; sourceTree = "<group>"; };
-		D98292DF1AC3AC0900660153 /* UMUFPHandleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UMUFPHandleView.h; sourceTree = "<group>"; };
 		D9AAC2021AADBE440003053B /* FSK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FSK.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9AAC2061AADBE440003053B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D9AAC2071AADBE440003053B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -96,6 +86,7 @@
 		D9AAC21D1AADBE440003053B /* FSKTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FSKTests.swift; sourceTree = "<group>"; };
 		D9AAC2271AADC2570003053B /* Bridging_Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Bridging_Header.h; sourceTree = "<group>"; };
 		D9AAC2281AAE9A8C0003053B /* ResourceParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResourceParser.swift; sourceTree = "<group>"; };
+		D9C1EA001B201F7B000F4F5B /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMobileAds.framework; sourceTree = "<group>"; };
 		DBF127763075F314F1943D2A /* libPods-FSK.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FSK.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF6A44AECF11DF08F115E8CD /* Pods-FSK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FSK.release.xcconfig"; path = "Pods/Target Support Files/Pods-FSK/Pods-FSK.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -116,15 +107,14 @@
 				D9190EEF1AB057C400EBAC9B /* CFNetwork.framework in Frameworks */,
 				D900107E1AAEBEDB003D7C4B /* MediaPlayer.framework in Frameworks */,
 				D9190EED1AB0577A00EBAC9B /* SystemConfiguration.framework in Frameworks */,
-				D98292E21AC3AC0900660153 /* UTDID.framework in Frameworks */,
 				D9190EEB1AB0576A00EBAC9B /* libsqlite3.dylib in Frameworks */,
+				D9C1EA011B201F7B000F4F5B /* GoogleMobileAds.framework in Frameworks */,
 				D951B64F1AAF0BC70068CBEA /* libz.dylib in Frameworks */,
 				D951B5F81AAEE1450068CBEA /* AVFoundation.framework in Frameworks */,
 				D9190EE61AB0573800EBAC9B /* EventKit.framework in Frameworks */,
 				D9190EE71AB0573800EBAC9B /* EventKitUI.framework in Frameworks */,
 				D951B64D1AAF0BBF0068CBEA /* libiconv.dylib in Frameworks */,
 				D951B5431AAED4CC0068CBEA /* Foundation.framework in Frameworks */,
-				D98292E01AC3AC0900660153 /* libMMU_5.4.0.a in Frameworks */,
 				D951B5411AAED4C20068CBEA /* UIKit.framework in Frameworks */,
 				FF21FB8DC5627477FFA08AD9 /* libPods-FSK.a in Frameworks */,
 			);
@@ -185,29 +175,6 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
-		D98292D61AC3AC0900660153 /* AliSDK */ = {
-			isa = PBXGroup;
-			children = (
-				D98292D71AC3AC0900660153 /* base */,
-				D98292DC1AC3AC0900660153 /* MMUBannerView.h */,
-				D98292DD1AC3AC0900660153 /* MMUInterstitialView.h */,
-				D98292DE1AC3AC0900660153 /* UMUFPBadgeView.h */,
-				D98292DF1AC3AC0900660153 /* UMUFPHandleView.h */,
-			);
-			path = AliSDK;
-			sourceTree = "<group>";
-		};
-		D98292D71AC3AC0900660153 /* base */ = {
-			isa = PBXGroup;
-			children = (
-				D98292D81AC3AC0900660153 /* libMMU_5.4.0.a */,
-				D98292D91AC3AC0900660153 /* MMUPromotersDataObject.h */,
-				D98292DA1AC3AC0900660153 /* UMUFP.bundle */,
-				D98292DB1AC3AC0900660153 /* UTDID.framework */,
-			);
-			path = base;
-			sourceTree = "<group>";
-		};
 		D9AAC1F91AADBE440003053B = {
 			isa = PBXGroup;
 			children = (
@@ -231,7 +198,7 @@
 		D9AAC2041AADBE440003053B /* FSK */ = {
 			isa = PBXGroup;
 			children = (
-				D98292D61AC3AC0900660153 /* AliSDK */,
+				D9C1EA001B201F7B000F4F5B /* GoogleMobileAds.framework */,
 				D951B6501AB00C650068CBEA /* Cell */,
 				D9AAC2071AADBE440003053B /* AppDelegate.swift */,
 				D9190EDA1AB024B700EBAC9B /* IndexTableController.swift */,
@@ -355,7 +322,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				D9AAC20D1AADBE440003053B /* Main.storyboard in Resources */,
-				D98292E11AC3AC0900660153 /* UMUFP.bundle in Resources */,
 				D9AAC2121AADBE440003053B /* LaunchScreen.xib in Resources */,
 				D9AAC20F1AADBE440003053B /* Images.xcassets in Resources */,
 			);
@@ -539,9 +505,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-1";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/FSK/AliSDK/base",
+					"$(PROJECT_DIR)/FSK",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREFIX_HEADER = "";
@@ -553,7 +521,7 @@
 					"$(PROJECT_DIR)/FSK/AliSDK/base",
 				);
 				PRODUCT_NAME = FSK;
-				PROVISIONING_PROFILE = "4317ab97-96c3-454e-a71f-ed6d136366fd";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = FSK/Bridging_Header.h;
 			};
 			name = Debug;
@@ -565,10 +533,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-1";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Jiabin Li (GW7ZRB8ABG)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/FSK/AliSDK/base",
+					"$(PROJECT_DIR)/FSK",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREFIX_HEADER = "";
@@ -580,7 +549,7 @@
 					"$(PROJECT_DIR)/FSK/AliSDK/base",
 				);
 				PRODUCT_NAME = FSK;
-				PROVISIONING_PROFILE = "4317ab97-96c3-454e-a71f-ed6d136366fd";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = FSK/Bridging_Header.h;
 			};
 			name = Release;

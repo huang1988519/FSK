@@ -8,11 +8,12 @@
 
 import UIKit
 import MediaPlayer
+import GoogleMobileAds
 
-class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate,UMUFPHandleViewDelegate,MMUBannerViewDelegate {
+class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate {
     @IBOutlet var tableView: UITableView!
 
-    @IBOutlet var adView: UIView!
+    @IBOutlet var adView: GADBannerView!
 
     var viewCount : Int = 1
 
@@ -29,8 +30,7 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
     var requestDic:NSMutableDictionary!
 
     
-    var handleView:UMUFPHandleView!
-    var bottomBanner:MMUBannerView!
+
     var parser:ResourceParser!
     
     override func viewDidLoad() {
@@ -43,30 +43,19 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
         listArray = NSMutableArray()
         
         
-        bottomBanner = MMUBannerView(frame: CGRectMake(0, 0, 320, 50), slotId: "65065", currentViewController: self)
-        bottomBanner.delegate = self
-        adView.addSubview(bottomBanner)
-        bottomBanner.requestPromoterDataInBackground()
-        //
-        handleView = UMUFPHandleView(frame: CGRectMake(CGRectGetWidth(self.view.frame)-64, CGRectGetHeight(self.tableView.frame)-64, 44, 44), appKey: nil
-            , slotId: "65066", currentViewController: self)
+        //adview
+        adView.adUnitID = "ca-app-pub-9740809110396658/6645102322"
+        adView.rootViewController = self
+        var adRequest:GADRequest = GADRequest()
+        adRequest.testDevices = [""]
+        adView.loadRequest(adRequest)
 
-        handleView.delegate = self
-        
-        self.view.addSubview(handleView);
-        handleView.requestPromoterDataInBackground()
-        
+        //请求接口
         request()
-        
-        
+
     }
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        bottomBanner.frame = adView.bounds;
-
-        handleView.frame = CGRectMake(CGRectGetWidth(self.view.frame)-64, CGRectGetHeight(self.tableView.frame)-64, 44, 44)
-        handleView.clipsToBounds = true
-        handleView.layer.cornerRadius = 44/2
     }
     
     func request(){
